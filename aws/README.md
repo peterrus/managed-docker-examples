@@ -7,8 +7,6 @@ This example uses a combination of Bash, AWS cli, ECS cli and docker-compose to 
 - An Elastic Container Service (ECS) cluster is created (Backed by one EC2 instance, configurable).
 - The Nginx container is deployed to the cluster
 
-This repository is mainly intended for my own reference but might be useful for others to build upon.
-
 ## Files
 - `docker-compose.yml` - Base docker-compose file which defines all services and their environment-independent properties.
 - `docker-compose.override.yml` - Gets sounced by default when no explicit override is given. Used to easily run the stack locally by just using `docker-compose up`. No dependency to ECR.
