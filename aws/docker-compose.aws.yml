@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  webserver: # use this service name for $SERVICES_TO_DEPLOY in configuration.sh
+    image: ${ECR_URL_PREFIX}_webserver
+    ports:
+      - "80:80"
+    logging:
+      driver: awslogs
+      options: 
+        awslogs-group: ${TASK_NAME}
+        awslogs-region: ${REGION}
+        awslogs-stream-prefix: webserver
