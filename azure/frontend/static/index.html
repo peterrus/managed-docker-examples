@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        var backendUrl = prompt('Enter the backend url (no trailing slash, include protocol)');
+
+        function testBackend() {
+            fetch(backendUrl + '/mysqltest').then(response => response.text()).then((text) => {alert('Backend replied with: ' + text)});
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>It works, yay.</h1>
+    <img src="great.gif" alt="There used to be an image here" />
+    <h2>Now go forth and learn.</h2>
+
+    <button onclick="javascript:testBackend();">Test Backend</button>
+
+</body>
+
+</html>

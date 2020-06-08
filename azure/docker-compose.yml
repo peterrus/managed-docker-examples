@@ -1,0 +1,26 @@
+version: '3'
+
+# for local running only
+services:
+  backend:
+    build: backend
+    ports:
+      - "8081:80" # app port
+      - "2222:2222" # ssh for debugging
+    environment:
+      - FLASK_DEBUG=1
+      - FLASK_APP=app.py
+      - FLASK_ENV=development
+      - DATABASE_URL=mysql://root:super-random-database-password@sqldb/azure-example
+      - APP_URL=http://localhost:8081
+
+  frontend:
+    build: frontend
+    ports:
+      - "8080:80"
+  sqldb:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: super-random-database-password
+      MYSQL_DATABASE: azure-example
+
