@@ -7,7 +7,7 @@ ecs-cli compose --file docker-compose.yml `# source the main docker-compose.yml`
                 --file docker-compose.aws.yml   `# and override it with some AWS specifics` \
                 service rm \
                 --cluster-config $CLUSTER_CONFIG_NAME \
-                --cluster $CLUSTER_NAME
+                --cluster $CLUSTER_NAME \
                 --ecs-profile $PROFILE_NAME
 
 # destroy the cluster
