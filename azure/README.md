@@ -12,11 +12,6 @@ This example uses a combination of Bash, AWS cli, ECS cli and docker-compose to 
     - One instance runs the backend container, some environment variables are being set on this instance, this instance also runs a SSH daemon for debugging inside the container.
     - Both instances redeploy their containers as soon as an updated image is pushed to the container registry
 
-- A Nginx container is built, containing static HTML and pushed to ECR.
-- An Elastic Container Service (ECS) cluster is created (Backed by 3 EC2 `t2.micro` instances, configurable).
-- The Nginx container is deployed to the cluster and then scaled up evenly across the cluster.
-- The addresses of the newly created endpoints are displayed so you can check out your new deployment.
-
 ## Files
 - `docker-compose.yml` - Base docker-compose file which defines all services and their properties. Is only used for local running and building. Azure has no stable support for docker-compose yet (But it is in preview at this time of writing).
 - `setup.sh` - Creates all resources on Azure.
