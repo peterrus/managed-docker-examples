@@ -17,6 +17,7 @@ This example uses a combination of Bash, AWS cli, ECS cli and docker-compose to 
 - `update.sh` - Rebuilds all Docker images and pushed them to ECR, then triggers a redeploy. This script can be wired up in your CI/CD pipeline.
 
 ## Usage
+- Run `docker-compose up` locally to make sure everything builds and runs correctly.(`http://localhost:8080` should be accessible).
 - Make sure you have `aws`, `ecs-cli` and `jq` installed.
 - Create a keypair (`aws ec2 create-key-pair --key-name aws-managed-docker-keypair --query 'KeyMaterial' --output text > aws-managed-docker-keypair.pem`)
 - Review the configuration in `configuration.sh`
