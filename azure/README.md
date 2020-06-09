@@ -1,6 +1,6 @@
 # Azure Managed Docker Example (AppService, Container Registry, Azure Database For MySQL)
 
-This example uses a combination of Bash, AWS cli, ECS cli and docker-compose to orchestrate the following:
+This example uses a combination of Bash and az cli to orchestrate the following:
 
 - A backend container image is built and tagged (Containing a simple Python backend, see `backend/app.py`)
 - A frontend container image is built and tagged (Containing static html and some javascript to do a GET request to the backend, see `frontend/index.html`)
